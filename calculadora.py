@@ -28,6 +28,15 @@ def exibir_historico(historico):
         print("\nHistórico das últimas 5 operações:")
         for i, op in enumerate(historico,1):
             print(f"{i}.{op}")
+#Função para verificar entradas numéricas inválidas
+def entrada_numero(mensagem):
+    while True:
+        try:
+            valor = float(input(mensagem))
+            return valor
+        except ValueError:
+            print("Entrada inválida. Por favor, insira um número válido.")
+
 #Função principal
 def calculadora():
     historico = [] # Lista para armazenar as últimas 5 operações
