@@ -28,3 +28,16 @@ def exibir_historico(historico):
         print("\nHistórico das últimas 5 operações:")
         for i, op in enumerate(historico,1):
             print(f"{i}.{op}")
+#Função principal
+def calculadora():
+    historico = [] # Lista para armazenar as últimas 5 operações
+    while True:
+        print("\nSelecione a operação:")
+        print("1- Soma")
+        print("2- Subtração")
+        print("3- Multiplicação")
+        print("4- Divisão")
+        print("5 - Exibir histórico")
+        print("6 - Sair")
+
+        escolha=input("Digite o número da operação desejada (1/2/3/4/5/6): ")
