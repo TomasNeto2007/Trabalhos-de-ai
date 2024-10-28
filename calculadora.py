@@ -41,3 +41,39 @@ def calculadora():
         print("6 - Sair")
 
         escolha=input("Digite o número da operação desejada (1/2/3/4/5/6): ")
+         #Verificar se a escolha é válida
+        if escolha in ['1','2','3','4']:
+            num1 = entrada_numero("Digite o primeiro número: ")
+            num2 = entrada_numero("Digite o segundo número: ")
+
+            if escolha == '1':
+                resultado = soma(num1, num2)
+                operacao = f"{num1} + {num2} = {resultado}"
+                print(operacao)
+            elif escolha == '2':
+                resultado = subtracao(num1, num2)
+                operacao = f"{num1} - {num2} = {resultado}"
+                print(operacao)
+            elif escolha == '3':
+                resultado = multiplicacao(num1, num2)
+                operacao = f"{num1} * {num2} = {resultado}"
+                print(operacao)
+            elif escolha == '4':
+                resultado = divisao(num1, num2)
+                operacao = f"{num1} / {num2} = {resultado}"
+                print(operacao)
+            #Armazenar a operação no histórico
+            armazenar_operacao(operacao, historico)
+        elif escolha == '5':
+            # Exibir hisórico
+            exibir_historico(historico)
+        elif escolha == '6':
+            # Sair do programa
+            print("Encerrando a calculadora.")
+            break
+        else:
+            print("Opção inválida. Por favor, tente novamente.")
+
+
+# Executa a calculadora
+calculadora()
